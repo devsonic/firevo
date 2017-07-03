@@ -13,4 +13,9 @@ public class MainController {
         model.addAttribute("message", "hello firevo!");
         return "main";
     }
+
+    @RequestMapping("map")
+    public String map(){
+        return "map";
+    }
 }
