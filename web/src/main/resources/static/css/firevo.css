@@ -1,5 +1,44 @@
 @charset "utf-8";
 
+body,input,textarea,select,button,table{font-size:14px;line-height:1.25em;font-family:'나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif}
+
+/* gnb */
+.gnb_tab {padding:0;}
+.gnb_tab_box {
+    text-align:center; height:125px; border: solid lightgray 1px;
+}
+.gnb_tab_img {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+    display:inline-block;
+    color: transparent;
+}
+.gnb_tab_txt {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    font-weight: bold;
+    font-size: 16px;
+    color:grey;
+}
+.gnb_tab_firevo {
+    background: url("http://localhost/images/firevo_button_default.png") no-repeat center;
+    width: 105px;
+    height: 24px;
+}
+.gnb_tab_reg {
+    background: url("http://localhost/images/register_button_default.png") no-repeat center;
+    width: 47px;
+    height: 41px;
+}
+.gnb_tab_video {
+    background: url("http://localhost/images/movie_button_default.png") no-repeat center;
+    width: 45px;
+    height: 34px;
+}
 /* footer */
 .ft{position: relative;padding:13px;background:#292b2c;}
 .ft_info {font-size: 12px;

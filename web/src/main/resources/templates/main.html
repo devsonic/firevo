@@ -4,26 +4,16 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
-          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
           crossorigin="anonymous"/>
     <link rel="stylesheet" href="/css/firevo.css" type="text/css"/>
     <title>Firevo Main Page</title>
+    <style type="text/css">
+
+    </style>
 </head>
 <body>
 <div class="pos-f-t">
-    <div class="collapse" id="navbarToggleExternalContent">
-        <div class="bg-inverse p-4">
-            <h4 class="text-white" th:text="${message}"/>
-            <span class="text-muted">Toggleable via the navbar brand.</span>
-        </div>
-    </div>
-    <nav class="navbar navbar-inverse bg-inverse">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </nav>
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12" style="height:125px">
@@ -31,22 +21,22 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-4" style="padding:0">
-                <div style="text-align:center; height:125px; border: solid lightgray 1px;">
-                    <img src="/images/firevo_button_default.png" style="padding-top: 43px"/>
-                    <p style="padding-top: 10px; color:grey">피레보</p>
+            <div class="col-sm-4 gnb_tab">
+                <div class="gnb_tab_box">
+                    <span class="gnb_tab_img gnb_tab_firevo">FIREVO</span>
+                    <span class="gnb_tab_txt">피레보</span>
                 </div>
             </div>
-            <div class="col-sm-4" style="padding:0">
-                <div style="text-align:center; height:125px; border: solid lightgray 1px;">
-                    <img src="/images/register_button_default.png" style="padding-top: 28px"/>
-                    <p style="padding-top: 5px; color:grey">정품등록</p>
+            <div class="col-sm-4 gnb_tab">
+                <div class="gnb_tab_box">
+                    <span class="gnb_tab_img gnb_tab_reg">REGISTER</span>
+                    <span class="gnb_tab_txt">정품등록</span>
                 </div>
             </div>
-            <div class="col-sm-4" style="padding:0">
-                <div style="text-align:center; height:125px; border: solid lightgray 1px;">
-                    <img src="/images/movie_button_default.png" style="padding-top: 43px"/>
-                    <p style="padding-top: 10px; color:grey">시연영상</p>
+            <div class="col-sm-4 gnb_tab">
+                <div class="gnb_tab_box">
+                    <span class="gnb_tab_img gnb_tab_video">REGISTER</span>
+                    <span class="gnb_tab_txt">시연영상</span>
                 </div>
             </div>
         </div>
