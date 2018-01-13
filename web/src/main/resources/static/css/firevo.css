@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+/* footer */
+.ft{position: relative;padding:13px;background:#292b2c;}
+.ft_info {font-size: 12px;
+    line-height: 15px;
+    color: #dcdcdc;
+    text-align: left;
+}
+.ft_info .ft_box {
+    max-width: 400px;
+    margin: 0 auto;
+}
+.ft_info .business_info {
+    display: block;
+    position: relative;
+    padding: 27px 0 0 17px;
+}
+.ft_info .business_info dt {
+    float: left;
+    margin-bottom: 1px;
+}
+.ft_info .business_info dd {
+    overflow: hidden;
+    margin-bottom: 1px;
+    padding-left: 4px;
+}
+.ft_info .business_info:after {
+    position: absolute;
+    top: 13px;
+    right: 17px;
+    left: 17px;
+    height: 0;
+    border-bottom: 1px solid #dcdcdc;
+    content: '';
+}
+.u_crt {
+    clear: both;
+    font-size: 12px;
+    line-height: 14px;
+    color: #dcdcdc;
+    text-align: center;
+    margin : 0
+}
+.u_cri {
+    display: inline-block;
+    margin: 0 2px;
+}
+.u_cri_v1:before {
+    display: inline-block;
+    vertical-align: top;
+    margin: 2px 6px 0 0;
+    width: 1px;
+    height: 12px;
+    background: url(http://static.naver.net/m/nstore/im/nsp_footer.png) no-repeat 0 -45px;
+    background-size: 73px 57px;
+    content: '';
+}
