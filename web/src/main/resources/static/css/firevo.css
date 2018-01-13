@@ -24,17 +24,17 @@ body,input,textarea,select,button,table{font-size:14px;line-height:1.25em;font-f
     color:grey;
 }
 .gnb_tab_firevo {
-    background: url(http://localhost/images/firevo_button_default.png) no-repeat center;
+    background: url(http://1.255.55.246/images/firevo_button_default.png) no-repeat center;
     width: 105px;
     height: 24px;
 }
 .gnb_tab_reg {
-    background: url(http://localhost/images/register_button_default.png) no-repeat center;
+    background: url(http://1.255.55.246/images/register_button_default.png) no-repeat center;
     width: 47px;
     height: 41px;
 }
 .gnb_tab_video {
-    background: url(http://localhost/images/movie_button_default.png) no-repeat center;
+    background: url(http://1.255.55.246/images/movie_button_default.png) no-repeat center;
     width: 45px;
     height: 34px;
 }
