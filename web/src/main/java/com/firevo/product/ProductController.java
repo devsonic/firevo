@@ -51,7 +51,7 @@ public class ProductController {
 			@Override
 			public void setAsText(String text) throws IllegalArgumentException {
 				try {
-					String[] split = text.split("-");
+					String[] split = text.split(",");
 					setValue(LocalDate.of(Integer.valueOf(split[0]), Integer.valueOf(split[1]), Integer.valueOf(split[2])));
 				} catch (Exception ex) {
 					setValue(null);
