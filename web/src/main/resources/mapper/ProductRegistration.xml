@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.firevo.repository.mapper.ProductRegistrationMapper">
+    <insert id="insert">
+        <!-- ProductRegistration.insert -->
+        INSERT INTO
+          product_registration (
+            serial_number,
+            name,
+            birthday,
+            color_type,
+            purchase_date,
+            shop_type,
+            shop_name,
+            register_date)
+        VALUES
+          (#{serialNumber}, #{name}, #{birthday}, #{colorType}, #{purchaseDate}, #{shopType}, #{shopName}, #{registerDate})
+    </insert>
+
+    <select id="selectOne" resultType="ProductRegistration">
+        SELECT *
+        FROM product_registration
+        WHERE serial_number = #{serialNumber}
+    </select>
+</mapper>

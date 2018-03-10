@@ -1,0 +1,15 @@
+spring:
+    datasource:
+        type: org.apache.tomcat.jdbc.pool.DataSource
+        driverClassName: org.mariadb.jdbc.Driver
+        url: jdbc:mariadb://1.255.55.246:3306/firevo?autoReconnect=true&useSSL=false&characterEncoding=utf8
+        username: root
+
+mybatis:
+    type-aliases-package: com.firevo.repository.entity
+    configuration:
+        map-underscore-to-camel-case: true
+        default-fetch-size: 100
+        default-statement-timeout: 5
+    mapper-locations: mapper/*.xml
+
