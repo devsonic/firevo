@@ -4,7 +4,6 @@ spring:
         driverClassName: org.mariadb.jdbc.Driver
         url: jdbc:mariadb://1.255.55.246:3306/firevo?autoReconnect=true&useSSL=false&characterEncoding=utf8
         username: root
-        password: firevo123123
 
 mybatis:
     type-aliases-package: com.firevo.repository.entity
