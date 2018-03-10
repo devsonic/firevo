@@ -27,19 +27,19 @@
                         <div class="form-group">
                             <label class="title" style="display: block;">생년월일</label>
                             <select class="form-control" style="display: inline-block; width: 140px" name="birthday">
-                                <option th:each="i : ${#numbers.sequence(1900,2018)}" th:value="${i}" th:label="${i}"/>
+                                <option th:each="i : ${#numbers.sequence(1900,2018)}" th:value="${i}" th:text="${i}"/>
                             </select>
                             <select class="form-control" style="display: inline-block; width: 90px" name="birthday">
-                                <option th:each="i : ${#numbers.sequence(1,12)}" th:value="${i}" th:label="${i}"/>
+                                <option th:each="i : ${#numbers.sequence(1,12)}" th:value="${i}" th:text="${i}"/>
                             </select>
                             <select class="form-control" style="display: inline-block; width: 90px" name="birthday">
-                                <option th:each="i : ${#numbers.sequence(1,31)}" th:value="${i}" th:label="${i}"/>
+                                <option th:each="i : ${#numbers.sequence(1,31)}" th:value="${i}" th:text="${i}"/>
                             </select>
                         </div>
                         <div class="form-group">
                             <label class="title">제품 색상</label>
                             <select class="form-control" name="colorType">
-                                <option th:each="item : ${T(com.firevo.product.ProductColorType).values()}" th:value="${item.code}" th:label="${item.desc}"/>
+                                <option th:each="item : ${T(com.firevo.product.ProductColorType).values()}" th:value="${item.code}" th:text="${item.desc}"/>
                             </select>
                         </div>
                         <div class="form-group">
@@ -49,19 +49,19 @@
                         <div class="form-group">
                             <label class="title" style="display: block;">제품 구매일</label>
                             <select class="form-control" style="display: inline-block; width: 140px" name="purchaseDate">
-                                <option th:each="i : ${#numbers.sequence(2018,2018)}" th:value="${i}" th:label="${i}"/>
+                                <option th:each="i : ${#numbers.sequence(2018,2018)}" th:value="${i}" th:text="${i}"/>
                             </select>
                             <select class="form-control" style="display: inline-block; width: 90px" name="purchaseDate">
-                                <option th:each="i : ${#numbers.sequence(1,12)}" th:value="${i}" th:label="${i}"/>
+                                <option th:each="i : ${#numbers.sequence(1,12)}" th:value="${i}" th:text="${i}"/>
                             </select>
                             <select class="form-control" style="display: inline-block; width: 90px" name="purchaseDate">
-                                <option th:each="i : ${#numbers.sequence(1,31)}" th:value="${i}" th:label="${i}"/>
+                                <option th:each="i : ${#numbers.sequence(1,31)}" th:value="${i}" th:text="${i}"/>
                             </select>
                         </div>
                         <div class="form-group">
                             <label class="title">구매처</label>
                             <select class="form-control" name="shopType">
-                                <option th:each="item : ${T(com.firevo.product.ProductShopType).values()}" th:value="${item.code}" th:label="${item.desc}"/>
+                                <option th:each="item : ${T(com.firevo.product.ProductShopType).values()}" th:value="${item.code}" th:text="${item.desc}"/>
                             </select>
                             <input type="hidden" id="elseCode" th:value="${T(com.firevo.product.ProductShopType).ELSE.getCode()}"/>
                             <input type="text" class="form-control shop_else" name="shopName"/>
