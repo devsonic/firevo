@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/css/firevo.css" type="text/css"/>
+    <title>Firevo Product</title>
+</head>
+<body>
+<div class="pos-f-t">
+    <div th:include="header :: copy"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 prd_form">
+                <form>
+                    <div class="form-group">
+                        <label class="title">구매자 이름</label>
+                        <input type="text" class="form-control" name="name"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="title">생년월일</label>
+                        <input type="date" class="form-control" name="birthday"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="title">제품 색상</label>
+                        <select class="form-control" name="colorType">
+                            <option th:each="item : ${T(com.firevo.product.ProductColorType).values()}" th:value="${item.code}" th:label="${item.desc}"/>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="title">제품 S/N</label>
+                        <input type="text" class="form-control" name="serialNumber"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="title">제품 구매일</label>
+                        <input type="date" class="form-control" name="purchaseDate"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="title">구매처</label>
+                        <select class="form-control" name="shopType">
+                            <option th:each="item : ${T(com.firevo.product.ProductShopType).values()}" th:value="${item.code}" th:label="${item.desc}"/>
+                        </select>
+                        <input type="hidden" id="elseCode" th:value="${T(com.firevo.product.ProductShopType).ELSE.getCode()}"/>
+                        <input type="text" class="form-control shop_else" name="shopName"/>
+                    </div>
+
+                </form>
+                <button type="button" class="btn btn-success">제품등록</button>
+            </div>
+        </div>
+    </div>
+    <div th:include="footer :: copy"></div>
+</div>
+<script type="application/javascript">
+    var shopElseCode = $("#elseCode").val();
+    var shopElseInput = $(".shop_else");
+
+    $("[name=shopType]").change(function() {
+        console.log(this);
+        if (this.selectedIndex == shopElseCode) {
+            shopElseInput.show();
+        } else {
+            shopElseInput.hide();
+        }
+    });
+
+    $(".btn-success").click(function() {
+        $.ajax({
+            url: "/product/registration",
+            method: "POST",
+            data: $("form").serialize()
+        }).done(function (data) {
+            if (data == "success") {
+                alert("제품이 등록되었습니다.");
+                location.reload();
+            } else {
+                alert(data);
+            }
+        }).fail(function () {
+            alert("제품 등록에 실패하였습니다.");
+        });
+    });
+</script>
+</body>
+</html>

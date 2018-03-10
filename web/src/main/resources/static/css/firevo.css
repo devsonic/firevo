@@ -1,68 +1,96 @@
 @charset "utf-8";
 
-body,input,textarea,select,button,table{font-size:14px;line-height:1.25em;font-family:'나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif}
+body, input, textarea, select, button, table {
+    font-size: 14px;
+    line-height: 1.25em;
+    font-family: '나눔고딕', NanumGothic, '맑은 고딕', 'Malgun Gothic', '돋움', Dotum, '굴림', Gulim, Helvetica, sans-serif
+}
 
 /* gnb */
-.gnb_tab {padding:0;}
-.gnb_tab_box {
-    text-align:center; height:125px; border: solid lightgray 1px;
+.gnb_tab {
+    padding: 0;
+    text-align: center;
+    height: 125px;
+    border: solid lightgray 1px;
+    border-left: 0;
 }
+
+.gnb_tab:last-child {
+    border-right: 0;
+}
+
 .gnb_tab_img {
     position: absolute;
     top: 35%;
     left: 50%;
     transform: translate(-50%, -35%);
-    display:inline-block;
+    display: inline-block;
     color: transparent;
 }
+
 .gnb_tab_txt {
     position: absolute;
     top: 75%;
     left: 50%;
     transform: translate(-50%, -75%);
     font-weight: bold;
-    color:grey;
+    color: grey;
 }
+
 .gnb_tab_firevo {
-    background: url(http://1.255.55.246/images/firevo_button_default.png) no-repeat center;
+    background: url(http://jmsys14.negagea.kr/firevo/resources/firevo_button_default.png) no-repeat center;
     width: 105px;
     height: 24px;
 }
+
 .gnb_tab_reg {
-    background: url(http://1.255.55.246/images/register_button_default.png) no-repeat center;
+    background: url(http://jmsys14.negagea.kr/firevo/resources/register_button_default.png) no-repeat center;
     width: 47px;
     height: 41px;
 }
+
 .gnb_tab_video {
-    background: url(http://1.255.55.246/images/movie_button_default.png) no-repeat center;
+    background: url(http://jmsys14.negagea.kr/firevo/resources/movie_button_default.png) no-repeat center;
     width: 45px;
     height: 34px;
 }
+
 /* footer */
-.ft{position: relative;padding:13px;background:#292b2c;}
-.ft_info {font-size: 12px;
+.ft {
+    position: relative;
+    padding: 13px;
+    background: #292b2c;
+}
+
+.ft_info {
+    font-size: 12px;
     line-height: 15px;
     color: #dcdcdc;
     text-align: left;
 }
+
 .ft_info .ft_box {
     max-width: 400px;
     margin: 0 auto;
 }
+
 .ft_info .business_info {
     display: block;
     position: relative;
     padding: 27px 0 0 17px;
 }
+
 .ft_info .business_info dt {
     float: left;
     margin-bottom: 1px;
 }
+
 .ft_info .business_info dd {
     overflow: hidden;
     margin-bottom: 1px;
     padding-left: 4px;
 }
+
 .ft_info .business_info:after {
     position: absolute;
     top: 13px;
@@ -72,25 +100,51 @@ body,input,textarea,select,button,table{font-size:14px;line-height:1.25em;font-f
     border-bottom: 1px solid #dcdcdc;
     content: '';
 }
+
 .u_crt {
     clear: both;
     font-size: 12px;
     line-height: 14px;
     color: #dcdcdc;
     text-align: center;
-    margin : 0
+    margin: 0
 }
+
 .u_cri {
     display: inline-block;
     margin: 0 2px;
 }
+
 .u_cri_v1:before {
     display: inline-block;
     vertical-align: top;
     margin: 2px 6px 0 0;
     width: 1px;
     height: 12px;
-    background: url(http://static.naver.net/m/nstore/im/nsp_footer.png) no-repeat 0 -45px;
+    /*background: url(http://static.naver.net/m/nstore/im/nsp_footer.png) no-repeat 0 -45px;*/
     background-size: 73px 57px;
     content: '';
+}
+
+/** product form */
+.prd_form {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.prd_form label {
+    font-weight: bold;
+}
+
+.prd_form input {
+    width: 330px;
+}
+
+.prd_form select {
+    width: 330px;
+}
+
+.prd_form .shop_else {
+    margin-top: 5px;
+    display: none;
 }

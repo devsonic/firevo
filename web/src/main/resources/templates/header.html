@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:fragment="copy">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-6" style="height:125px">
+                        <img src="http://jmsys14.negagea.kr/firevo/resources/firevo_title_150x34.png" style="margin-top: 45px;"/>
+                    </div>
+                    <div class="col-6" style="height:125px;">
+                        <div class="top_btn_area" style="text-align:right; margin-top:45px">
+                            <img src="http://jmsys14.negagea.kr/firevo/resources/search_icon.png"/>
+                            <img src="http://jmsys14.negagea.kr/firevo/resources//more_icon.png"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4 gnb_tab">
+                <a href="/">
+                    <div class="gnb_tab_box">
+                        <span class="gnb_tab_img gnb_tab_firevo">FIREVO</span>
+                        <span class="gnb_tab_txt">피레보</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-4 gnb_tab">
+                <a href="/product/registration">
+                    <div class="gnb_tab_box">
+                        <span class="gnb_tab_img gnb_tab_reg">REGISTER</span>
+                        <span class="gnb_tab_txt">정품등록</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-4 gnb_tab">
+                <div class="gnb_tab_box video">
+                    <span class="gnb_tab_img gnb_tab_video">REGISTER</span>
+                    <span class="gnb_tab_txt">시연영상</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="application/javascript">
+        $(".video").click(function() {
+            alert("준비중입니다.");
+        });
+    </script>
+</div>
+</body>
+</html>
